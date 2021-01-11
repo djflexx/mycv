@@ -1,0 +1,15 @@
+.section-content ul h1 {
+ font-size: 2em;
+ letter-spacing: 1.5px;
+ margin: 20px 0;
+ text-align: left;
+}
+@media screen and (max-width: 600px) {
+.section-content ul h1 {
+    font-size: 1.6em;
+}
+.section-content ul p {
+    margin-bottom: 20px;
+    font-size: 0.8em;
+}
+}

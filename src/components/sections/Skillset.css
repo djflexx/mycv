@@ -1,0 +1,22 @@
+.small-section  {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    margin-top: 20px;
+}
+.title-and-header {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.skillset h1 {
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    margin-left: 10px;
+}
+@media screen and (max-width: 600px) {
+    .small-section {
+        justify-content: space-around;
+    }
+}

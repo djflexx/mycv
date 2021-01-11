@@ -1,0 +1,23 @@
+.container {
+    width: fit-content;
+    min-width: 300px;
+    max-width: 100%;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #393e46;
+    padding: 15px;
+    border-radius: 4px;
+}
+.container:hover {
+    background-color: #2b323b;
+    cursor: pointer;
+}
+.section-heading {
+    min-width: 285px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}

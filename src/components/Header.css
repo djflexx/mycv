@@ -1,0 +1,25 @@
+.header {
+   width: 100%;
+   padding: 40px;
+   background-color: #eeeeee;
+   margin-bottom: 50px;
+}
+.header-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.header-title h1 {
+    display: inline;
+    font-weight: 600;
+}
+.header-title p {
+    display: inline;
+    font-weight: 400;
+    letter-spacing: 0.29em;
+    font-size: 0.8em;
+    text-decoration: overline;
+    margin-top: 5px;
+}

@@ -1,38 +1,7 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.background {
+    background: url("https://previews.dropbox.com/p/thumb/ABCMw_gZ7uDTeQTcw-IWBW5PeSPaJdX5sD9AE_cIvSYpo9H32k5A3fTJBSgfALmS0IcC_DMbSDM3kKAPiF0RePGNWU1eGnG_ng0dIf_J8uQktgQ1S3dL5hm8nQl6e0-Eb_pwXAFN1CDj4izrj36PDZqOCrhqMkyqF4jw-jEMcuKTFg85yjw6dxUcgoMlByEnONLKb7D2XxsIf6df8OkgTqfbqA2GRTSzr9dtKbgq1-A4h6UQ75StMhm3sFz1kYgHCZRu8sry7b9bvWynE8BQ8a0qZuuMNwDfal0zvQqWOxMohICsWhtiXLXAMvGZE7S9gbPDk3PSNZrKoX1dI2uKJNq3kiXS11CeUbNzEHqhx4RM3A/p.jpeg?fv_content=true&size_mode=5");
+    opacity: 0.5;
+    background-attachment: scroll;
+    position:absolute;
+    top: 0;
 }
