@@ -66,7 +66,6 @@ export default function Section() {
                     <div className={!isClicked ? "section-heading" : "heading-open"} onClick={handleClick}>
                       {!isClicked && <Icon icon= {section.icon}/> }
                       <SectionTitle content={section.content}/>
-
                     </div>
                         {(isClicked && sectionName === "about" && sectionName === section.name &&  <About />)}
                         {(isClicked && sectionName === "resume" && sectionName === section.name &&  <Resume />)}
