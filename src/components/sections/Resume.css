@@ -5,8 +5,11 @@
  text-align: left;
 }
 @media screen and (max-width: 600px) {
+.section-content ul {
+    padding: 0;
+}
 .section-content ul h1 {
-    font-size: 1.6em;
+    font-size: 1.2em;
 }
 .section-content ul p {
     margin-bottom: 20px;

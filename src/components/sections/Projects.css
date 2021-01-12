@@ -33,9 +33,6 @@
     margin-left: 20px;
 }
 @media screen and (max-width: 600px) {
-.project-image {
-    margin: 15px auto 0 0;
-}
 .project-header-description {
     flex-direction: column;
     align-items: center;

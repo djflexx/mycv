@@ -19,4 +19,10 @@
     .small-section {
         justify-content: space-between;
     }
+    .title-and-header img {
+    width: 30px;
+    }
+    .skillset h1 {
+        font-size: 1em;
+    }
 }
