@@ -1,5 +1,5 @@
 import React, {useState, useReducer} from 'react'
-import Collapse from '@material-ui/core/Collapse';
+
 
 
 import './Section.css'
@@ -68,16 +68,11 @@ export default function Section() {
                       <SectionTitle content={section.content}/>
 
                     </div>
-                    <Collapse
-                    in={isClicked}
-                    timeout={"auto"}
-                    >
                         {(isClicked && sectionName === "about" && sectionName === section.name &&  <About />)}
                         {(isClicked && sectionName === "resume" && sectionName === section.name &&  <Resume />)}
                         {(isClicked && sectionName === "skillset" && sectionName === section.name &&  <Skillset />)}
                         {(isClicked && sectionName === "projects" && sectionName === section.name &&  <Projects />)}
                         {(isClicked && sectionName === "contact" && sectionName === section.name &&  <Contact />)}                        
-                    </Collapse>
                     </div>
                 )
             })}
