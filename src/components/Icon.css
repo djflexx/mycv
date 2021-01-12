@@ -3,8 +3,16 @@
 }
 .icon-styles {
     border-radius: 50%;
-    margin-left: 35px;
     padding: 6px;
     border: none;
     background-color: #eeeeee;
+    outline: none;
+}
+.icon-styles:active {
+    border: none;
+    outline: none;
+}
+.icon-styles:hover {
+    border: none;
+    outline: none;
 }

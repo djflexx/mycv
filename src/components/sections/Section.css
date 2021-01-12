@@ -1,23 +1,45 @@
 .container {
-    width: fit-content;
-    min-width: 300px;
+    width: 300px;
     max-width: 100%;
-    margin: 30px auto;
+    margin: 45px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #393e46;
-    padding: 15px;
     border-radius: 4px;
 }
+.container-open {
+    min-width: 300px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 10px auto 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #393e46;
+    border-radius: 4px;   
+}
+
 .container:hover {
     background-color: #2b323b;
     cursor: pointer;
 }
 .section-heading {
-    min-width: 285px;
+    width: 100%;
+    padding: 10px 40px;
     display: flex;
-    justify-content: flex-start;
+    flex-direction: row-reverse;
     align-items: center;
+    justify-content: space-between;
+}
+.heading-open {
+    width: 100%;
+    padding: 10px 40px;
+    height: 70px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;   
 }
