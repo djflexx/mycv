@@ -1,5 +1,5 @@
 import React, {useState, useReducer} from 'react'
-import Zoom from '@material-ui/core/Collapse';
+import Collapse from '@material-ui/core/Collapse';
 
 
 import './Section.css'
@@ -68,18 +68,16 @@ export default function Section() {
                       <SectionTitle content={section.content}/>
 
                     </div>
-                    <Zoom
+                    <Collapse
                     in={isClicked}
                     timeout={"auto"}
-                    mountOnEnter
-                    unmountOnExit
                     >
                         {(isClicked && sectionName === "about" && sectionName === section.name &&  <About />)}
                         {(isClicked && sectionName === "resume" && sectionName === section.name &&  <Resume />)}
                         {(isClicked && sectionName === "skillset" && sectionName === section.name &&  <Skillset />)}
                         {(isClicked && sectionName === "projects" && sectionName === section.name &&  <Projects />)}
                         {(isClicked && sectionName === "contact" && sectionName === section.name &&  <Contact />)}                        
-                    </Zoom>
+                    </Collapse>
                     </div>
                 )
             })}
