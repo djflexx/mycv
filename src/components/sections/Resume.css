@@ -6,13 +6,15 @@
 }
 @media screen and (max-width: 600px) {
 .section-content ul {
+    width: 80%;
+    margin: 0;
     padding: 0;
 }
 .section-content ul h1 {
-    font-size: 1.2em;
+    font-size: 1em;
 }
 .section-content ul p {
     margin-bottom: 20px;
-    font-size: 0.8em;
+    font-size: 0.6em;
 }
 }

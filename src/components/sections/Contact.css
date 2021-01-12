@@ -33,20 +33,22 @@
     margin-left: 20px;
 }
 @media screen and (max-width: 500px) {
-    .contact-details {
-        margin-left: 10px;
-        font-size: 0.3em;
+    .icon-and-link p {
+        font-size: 0.55em;
+    }
+    .icon-and-link {
+    width: fit-content;
     }
     .icon-and-link a{
     font-size: 0.6em;
     padding: 7px;
-    margin-right: 10px;
+    margin-right: 5px;
     width: 70px;
     }
     .icon-and-link img {
         visibility: hidden;
-        margin-right: 5px;
-        width: 30px;
+        margin: 0;
+        width: 0;
     }
     .contact-details{
         font-size: 0.2em;
