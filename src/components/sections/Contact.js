@@ -1,10 +1,19 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import "./Contact.css"
+import SectionTitle from '../../components/SectionTitle'
 
 
 
-export default function Contact() {
+export default function Contact(props) {
+  useEffect(() => {
+    props.setIsOpen(true)       
+}, [])
+const handleClick = () => {
+    props.setIsOpen(false)
+}
     return (
+      <div className="big-container" onClick={handleClick}>
+      {props.open && <SectionTitle content={props.title}/>}
         <div className="section-content">
            <div className="contact-section">
            <div className="small-section">
@@ -22,6 +31,7 @@ export default function Contact() {
              </div>
            </div>
            </div>
+        </div>
         </div>
     )
 }

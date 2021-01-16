@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './About.css'
+import SectionTitle from '../../components/SectionTitle'
 
-
-export default function About() {
+export default function About(props) {
+    useEffect(() => {
+        props.setIsOpen(true)       
+    }, [])
+    const handleClick = () => {
+        props.setIsOpen(false)
+    }
     return (
+        <div onClick={handleClick} className="big-container">
+        {props.open && <SectionTitle content={props.title}/>}
         <div className="section-content">
           <p>
           My name is Idan Atias, I am 29 years old,<br />
@@ -19,6 +27,7 @@ export default function About() {
          <div className="about-image">
              <img src="https://previews.dropbox.com/p/thumb/ABCQuih4t3_YFZoDaxS2d-IQoF0RooMMal9bQAxsB3mOlDl9Hg7UgaB0SFr7UzkszKq4UZyQFt0sZQ4Hyg11wSvLXcJcslCha8WgTKLHJRQ3yXHJiyk2BMvQJWhuqAS8sYVwdrTjt_jlNj9Sr3qwmOh7iCDhr_b4c7AXrhTyH2-0xF3d98gwTki5Q8TIZWrVLBJfxH2JC7BJjVmWsAErJChnBck2qlXeCyCwDlwJMSrvMhoLMtHDkLdCKzVI7syNTlda_F-cMVklam5vRWkXsOGZxaZ6XSJBd5uiDPD8YUTRjGQrV4CZlFfvxS5pAshlou-0_0tdgfALA8wlByl612QnJDzeHvkqrDnVLc0u4XuHNQ/p.jpeg?fv_content=true&size_mode=5" alt="me"></img>
          </div> 
+        </div>
         </div>
     )
 }

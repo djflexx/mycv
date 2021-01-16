@@ -1,8 +1,12 @@
+.big-container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
 .section-content {
     margin: 10px 35px 5px 35px;
     padding: 20px;
     max-width: 90%;
-    border-top: 1px solid rgb(97, 96, 96);
     color: white;
     display: flex;
     align-items: center;

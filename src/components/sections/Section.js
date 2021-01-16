@@ -10,6 +10,7 @@ import Resume from './Resume';
 import Skillset from './Skillset';
 import Projects from './Projects';
 import Contact from './Contact';
+import ClosingSection from './ClosingSection'
 
 
 const initialState = '';
@@ -24,13 +25,7 @@ const initialState = '';
         }
     }
 export default function Section() {
-    const [isClicked, setIsClicked] = useState([
-        {clicked: false, name: "About Me"},
-        {clicked: false, name: "Résumé"},
-        {clicked: false, name: "Skill set"},
-        {clicked: false, name: "Projects"},
-        {clicked: false , name: "Contact"},
-    ])
+    const [isClicked, setIsClicked] = useState('')
     const [isOpen, setIsOpen] = useState(false);
     const [sectionName, dispatch] = useReducer(reducer, initialState)
     const sections = [
@@ -61,25 +56,31 @@ export default function Section() {
     },
     ]
     const handleClick = (event) => {
-    dispatch(event.target.id)    
-    setIsOpen(state => !state)
+    dispatch(event.target.id) 
+    setIsClicked(event.target.id)
+    setIsOpen(prevstate => !prevstate)
+    console.log(isOpen)
     }
 
     return (
         <>
             {sections.map((section, index) => {
                 return (
-                    <div className="container" key={index} onClick={handleClick} id={isClicked[index].name}>
-                    <div className="section-heading" onClick={handleClick} id={isClicked[index].name}>
+                    <div className="container" key={index} onClick={handleClick} id={sections[index].content}>
+                    {isOpen && isClicked === section.content ? <ClosingSection setIsOpen={setIsOpen}/> :
+                    <div className={ isClicked === section.content && isOpen ? "section-open" : "section-heading"} onClick={handleClick} id={sections[index].content}>
+                      <>
                       <Icon icon= {section.icon}/>
-                      <SectionTitle content={section.content}/>
+                      <SectionTitle content={section.content} setIsOpen={setIsOpen}/>
+                      </>                     
                     </div>
+                    }
                     <>   
-                       {(sectionName === "about" && sectionName === section.name &&  <About />)}
-                       {(sectionName === "resume" && sectionName === section.name && <Resume />)}
-                       {(sectionName === "skillset" && sectionName === section.name &&  <Skillset />)}
-                       {(sectionName === "projects" && sectionName === section.name &&  <Projects />)}
-                       {(sectionName === "contact" && sectionName === section.name && <Contact />)}
+                       {(sectionName === "about" && sectionName === section.name && <About title={section.content} open={isOpen} setIsOpen={setIsOpen}/> )}
+                       {(sectionName === "resume" && sectionName === section.name &&  <Resume title={section.content} open={isOpen} setIsOpen={setIsOpen}/>)}
+                       {(sectionName === "skillset" && sectionName === section.name && <Skillset title={section.content} open={isOpen} setIsOpen={setIsOpen}/>)}
+                       {(sectionName === "projects" && sectionName === section.name &&  <Projects title={section.content} open={isOpen} setIsOpen={setIsOpen}/>)}
+                       {(sectionName === "contact" && sectionName === section.name && <Contact title={section.content} open={isOpen} setIsOpen={setIsOpen} />)}
                     </>                    
                     </div>
                 )

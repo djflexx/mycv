@@ -1,8 +1,19 @@
-import React from 'react'
+import React,{useEffect} from 'react'
 import './Projects.css'
+import SectionTitle from '../../components/SectionTitle'
 
-export default function Projects() {
+export default function Projects(props) {
+
+  useEffect(() => {
+    props.setIsOpen(true)       
+}, [])
+const handleClick = () => {
+    props.setIsOpen(false)
+}
+
     return (
+      <div className="big-container" onClick={handleClick}>
+      {props.open && <SectionTitle content={props.title}/>}
         <div className="section-content">
           <div className="project-header-description">
             <h1>Ecoswap</h1>
@@ -14,6 +25,7 @@ export default function Projects() {
           <div className="project-image">
              <img src="https://ecoswap.me/wp-content/uploads/2020/09/Untitled-3-05.png" alt="ecoswap"/>
           </div>
+        </div>
         </div>
     )
 }

@@ -1,8 +1,19 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import './Skillset.css'
+import SectionTitle from '../../components/SectionTitle'
 
-export default function Skillset() {
+export default function Skillset(props) {
+
+  useEffect(() => {
+    props.setIsOpen(true)       
+}, [])
+const handleClick = () => {
+    props.setIsOpen(false)
+}
+
     return (
+        <div className="big-container" onClick={handleClick}>
+        {props.open && <SectionTitle content={props.title}/>}
         <div className="section-content">
             <div className="skillset">
                <div className="small-section">
@@ -34,6 +45,7 @@ export default function Skillset() {
                     <p>MongoDB</p>
                 </div>
             </div>
+        </div>
         </div>
     )
 }
