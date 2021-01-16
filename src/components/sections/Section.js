@@ -56,9 +56,12 @@ export default function Section() {
     },
     ]
     const handleClick = (event) => {
-    dispatch(event.target.id) 
-    setIsClicked(event.target.id)
+    const currentItem = event.target.id;
+    dispatch(currentItem);
+    setIsClicked(currentItem)
     setIsOpen(prevstate => !prevstate)
+    const scroll = document.getElementById(currentItem)
+    scroll.scrollIntoView();
     console.log(isOpen)
     }
 
