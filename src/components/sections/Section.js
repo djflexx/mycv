@@ -24,7 +24,13 @@ const initialState = '';
         }
     }
 export default function Section() {
-    const [isClicked, setIsClicked] = useState(false)
+    const [isClicked, setIsClicked] = useState([
+        {about: false},
+        {resume: false},
+        {skillset: false},
+        {contact: false},
+        {projects: false},
+    ])
     const [sectionName, dispatch] = useReducer(reducer, initialState)
     const sections = [
     {
@@ -54,8 +60,8 @@ export default function Section() {
     },
     ]
     const handleClick = (event) => {
-    setIsClicked(prevState => !prevState)
     dispatch(event.target.innerText)
+    setIsClicked(prevState => !prevState)
     console.log(sectionName)
     }
 
