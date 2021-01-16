@@ -2,4 +2,5 @@
     color: #eeeeee;
     font-size: 1.4em;
     float: left;
+    pointer-events: none;
 }
