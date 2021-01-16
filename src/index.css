@@ -4,6 +4,7 @@
 body {
   margin: 0;
   background-color: #222831;
+  user-select: none;
 }
 h1 {
   font-family: 'Comfortaa', cursive;
