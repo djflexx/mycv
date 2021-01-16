@@ -25,11 +25,11 @@ const initialState = '';
     }
 export default function Section() {
     const [isClicked, setIsClicked] = useState([
-        {isOpen: false, name: "About Me"},
-        {isOpen: false, name: "Résumé"},
-        {isOpen: false, name: "Skill set"},
-        {isOpen: false, name: "Contact"},
-        {isOpen: false , name: "Projects"},
+        {clicked: false, name: "About Me"},
+        {clicked: false, name: "Résumé"},
+        {clicked: false, name: "Skill set"},
+        {clicked: false, name: "Projects"},
+        {clicked: false , name: "Contact"},
     ])
     const [isOpen, setIsOpen] = useState(false);
     const [sectionName, dispatch] = useReducer(reducer, initialState)
@@ -61,32 +61,25 @@ export default function Section() {
     },
     ]
     const handleClick = (event) => {
-    dispatch(event.target.innerText)
+    dispatch(event.target.id)    
     setIsOpen(state => !state)
-    if(isClicked > 0){
-    isClicked.map(section => {
-    if (section.name === event.target.innerText){
-        setIsClicked({isOpen: isClicked})
-    }
-    })
-    }
     }
 
     return (
         <>
             {sections.map((section, index) => {
                 return (
-                    <div className="container" key={index} onClick={handleClick}>
-                    <div className="section-heading" onClick={handleClick}>
+                    <div className="container" key={index} onClick={handleClick} id={isClicked[index].name}>
+                    <div className="section-heading" onClick={handleClick} id={isClicked[index].name}>
                       <Icon icon= {section.icon}/>
-                      <SectionTitle content={section.content}/> 
+                      <SectionTitle content={section.content}/>
                     </div>
                     <>   
-                       {(isClicked && sectionName === "about" && sectionName === section.name &&  <About />)}
-                       {(isClicked && sectionName === "resume" && sectionName === section.name &&  <Resume />)}
-                       {(isClicked && sectionName === "skillset" && sectionName === section.name &&  <Skillset />)}
-                       {(isClicked && sectionName === "projects" && sectionName === section.name &&  <Projects />)}
-                       {(isClicked && sectionName === "contact" && sectionName === section.name &&  <Contact />)}
+                       {(sectionName === "about" && sectionName === section.name &&  <About />)}
+                       {(sectionName === "resume" && sectionName === section.name && <Resume />)}
+                       {(sectionName === "skillset" && sectionName === section.name &&  <Skillset />)}
+                       {(sectionName === "projects" && sectionName === section.name &&  <Projects />)}
+                       {(sectionName === "contact" && sectionName === section.name && <Contact />)}
                     </>                    
                     </div>
                 )
