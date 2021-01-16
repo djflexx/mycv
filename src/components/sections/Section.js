@@ -58,11 +58,11 @@ export default function Section() {
     const myRef = useRef(null)
     const  executeScroll = () => myRef.current.scrollIntoView()
     const handleClick = (event) => {
+    executeScroll()    
     const currentItem = event.target.id;
     dispatch(currentItem);
     setIsClicked(currentItem)
     setIsOpen(prevstate => !prevstate)
-    executeScroll()
     console.log(isOpen)
     }
 
@@ -70,7 +70,7 @@ export default function Section() {
         <>
             {sections.map((section, index) => {
                 return (
-                    <div className="container" key={index} ref={myRef} onClick={handleClick} id={sections[index].content}>
+                    <div className="container" key={index} onClick={handleClick} id={sections[index].content}>
                     {isOpen && isClicked === section.content ? <ClosingSection setIsOpen={setIsOpen}/> :
                     <div className={ isClicked === section.content && isOpen ? "section-open" : "section-heading"} onClick={handleClick} id={sections[index].content}>
                       <>
@@ -79,13 +79,13 @@ export default function Section() {
                       </>                     
                     </div>
                     }
-                    <>   
+                    <div ref={myRef}>   
                        {(sectionName === "about" && sectionName === section.name && <About title={section.content} open={isOpen} setIsOpen={setIsOpen}/> )}
                        {(sectionName === "resume" && sectionName === section.name &&  <Resume title={section.content} open={isOpen} setIsOpen={setIsOpen}/>)}
                        {(sectionName === "skillset" && sectionName === section.name && <Skillset title={section.content} open={isOpen} setIsOpen={setIsOpen}/>)}
                        {(sectionName === "projects" && sectionName === section.name &&  <Projects title={section.content} open={isOpen} setIsOpen={setIsOpen}/>)}
                        {(sectionName === "contact" && sectionName === section.name && <Contact title={section.content} open={isOpen} setIsOpen={setIsOpen} />)}
-                    </>                    
+                    </div>                    
                     </div>
                 )
             })}
