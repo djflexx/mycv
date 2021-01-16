@@ -1,4 +1,4 @@
-import React, {useState, useReducer} from 'react'
+import React, {useState, useReducer, useRef} from 'react'
 
 
 
@@ -55,13 +55,14 @@ export default function Section() {
     name: "contact"
     },
     ]
+    const myRef = useRef(null)
+    const  executeScroll = () => myRef.current.scrollIntoView()
     const handleClick = (event) => {
     const currentItem = event.target.id;
     dispatch(currentItem);
     setIsClicked(currentItem)
     setIsOpen(prevstate => !prevstate)
-    const scroll = document.getElementById(currentItem)
-    scroll.scrollIntoView();
+    executeScroll()
     console.log(isOpen)
     }
 
@@ -69,7 +70,7 @@ export default function Section() {
         <>
             {sections.map((section, index) => {
                 return (
-                    <div className="container" key={index} onClick={handleClick} id={sections[index].content}>
+                    <div className="container" key={index} ref={myRef} onClick={handleClick} id={sections[index].content}>
                     {isOpen && isClicked === section.content ? <ClosingSection setIsOpen={setIsOpen}/> :
                     <div className={ isClicked === section.content && isOpen ? "section-open" : "section-heading"} onClick={handleClick} id={sections[index].content}>
                       <>
