@@ -3,6 +3,7 @@
    padding: 40px;
    background-color: #eeeeee;
    margin-bottom: 50px;
+   pointer-events: none;
 }
 .header-title {
     display: flex;
