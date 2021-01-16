@@ -20,6 +20,7 @@ const initialState = '';
             case "Skill set": return state = "skillset";
             case "Contact": return state = "contact";
             case "Projects": return state = "projects";
+            default: return state = null;
         }
     }
 export default function Section() {
@@ -65,13 +66,15 @@ export default function Section() {
                     <div className={!isClicked ? "container" : "container-open"} key={index} onClick={handleClick}>
                     <div className={!isClicked ? "section-heading" : "heading-open"}>
                       {!isClicked && <Icon icon= {section.icon}/> }
-                      <SectionTitle content={section.content}/>
+                      <SectionTitle content={section.content}/> 
                     </div>
-                        {(isClicked && sectionName === "about" && sectionName === section.name &&  <About />)}
-                        {(isClicked && sectionName === "resume" && sectionName === section.name &&  <Resume />)}
-                        {(isClicked && sectionName === "skillset" && sectionName === section.name &&  <Skillset />)}
-                        {(isClicked && sectionName === "projects" && sectionName === section.name &&  <Projects />)}
-                        {(isClicked && sectionName === "contact" && sectionName === section.name &&  <Contact />)}                        
+                    <>   
+                       {(isClicked && sectionName === "about" && sectionName === section.name &&  <About />)}
+                       {(isClicked && sectionName === "resume" && sectionName === section.name &&  <Resume />)}
+                       {(isClicked && sectionName === "skillset" && sectionName === section.name &&  <Skillset />)}
+                       {(isClicked && sectionName === "projects" && sectionName === section.name &&  <Projects />)}
+                       {(isClicked && sectionName === "contact" && sectionName === section.name &&  <Contact />)}
+                    </>                    
                     </div>
                 )
             })}
