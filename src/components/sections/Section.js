@@ -24,7 +24,14 @@ const initialState = '';
         }
     }
 export default function Section() {
-    const [isClicked, setIsClicked] = useState(false)
+    const [isClicked, setIsClicked] = useState([
+        {isOpen: false, name: "About Me"},
+        {isOpen: false, name: "Résumé"},
+        {isOpen: false, name: "Skill set"},
+        {isOpen: false, name: "Contact"},
+        {isOpen: false , name: "Projects"},
+    ])
+    const [isOpen, setIsOpen] = useState(false);
     const [sectionName, dispatch] = useReducer(reducer, initialState)
     const sections = [
     {
@@ -54,18 +61,24 @@ export default function Section() {
     },
     ]
     const handleClick = (event) => {
-    setIsClicked(prevState => !prevState)
     dispatch(event.target.innerText)
-    console.log(sectionName)
+    setIsOpen(state => !state)
+    if(isClicked > 0){
+    isClicked.map(section => {
+    if (section.name === event.target.innerText){
+        setIsClicked({isOpen: isClicked})
+    }
+    })
+    }
     }
 
     return (
         <>
             {sections.map((section, index) => {
                 return (
-                    <div className={!isClicked ? "container" : "container-open"} key={index} onClick={handleClick}>
-                    <div className={!isClicked ? "section-heading" : "heading-open"}>
-                      {!isClicked && <Icon icon= {section.icon}/> }
+                    <div className="container" key={index} onClick={handleClick}>
+                    <div className="section-heading">
+                      <Icon icon= {section.icon}/>
                       <SectionTitle content={section.content}/> 
                     </div>
                     <>   

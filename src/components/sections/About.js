@@ -17,7 +17,7 @@ export default function About() {
           Now , this hobby has become my biggest passion and my goal is<br /> to make it my way of living.
           </p>
          <div className="about-image">
-             <img src="https://previews.dropbox.com/p/thumb/ABA4UCwghjx7mAVeAc8WiiizzmVN5b6KK6uiaSFWm0Jgiwdocn8Qal5GfXXWW0YW0ycTWz1wMkpuTSlUYdhGqq18t6QL3qQsAt025r0icW9ywYXCoB88QN3JsozEhxY5AvY_phFSFWmu8SDM1MZp-KDvEwnHxnbTWw57AfQ3lI_5D_7ahdBvt2RtslkT2LimJt1bDoiYl2FU5Fh08zlkcgZvhIFp_TPO1a2ysogpKnZ-RRjVoBu_hQY_VYje8eWOOm4kplRX1dDsyAJCFNsPPhRS0jrjtmFTQQkHLFWRA-bbxL3Z4RWah_gS6OHGR_T0L614lZmTlr3Am6RxwOEhaDEkhMeB3_PY3Cc3l_MWc2Qhmg/p.jpeg?fv_content=true&size_mode=5" alt="me"></img>
+             <img src="https://previews.dropbox.com/p/thumb/ABCQuih4t3_YFZoDaxS2d-IQoF0RooMMal9bQAxsB3mOlDl9Hg7UgaB0SFr7UzkszKq4UZyQFt0sZQ4Hyg11wSvLXcJcslCha8WgTKLHJRQ3yXHJiyk2BMvQJWhuqAS8sYVwdrTjt_jlNj9Sr3qwmOh7iCDhr_b4c7AXrhTyH2-0xF3d98gwTki5Q8TIZWrVLBJfxH2JC7BJjVmWsAErJChnBck2qlXeCyCwDlwJMSrvMhoLMtHDkLdCKzVI7syNTlda_F-cMVklam5vRWkXsOGZxaZ6XSJBd5uiDPD8YUTRjGQrV4CZlFfvxS5pAshlou-0_0tdgfALA8wlByl612QnJDzeHvkqrDnVLc0u4XuHNQ/p.jpeg?fv_content=true&size_mode=5" alt="me"></img>
          </div> 
         </div>
     )
