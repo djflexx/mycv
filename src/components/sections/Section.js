@@ -77,7 +77,7 @@ export default function Section() {
             {sections.map((section, index) => {
                 return (
                     <div className="container" key={index} onClick={handleClick}>
-                    <div className="section-heading">
+                    <div className="section-heading" onClick={handleClick}>
                       <Icon icon= {section.icon}/>
                       <SectionTitle content={section.content}/> 
                     </div>
