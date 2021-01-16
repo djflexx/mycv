@@ -7,7 +7,6 @@
     border: none;
     background-color: #eeeeee;
     outline: none;
-    pointer-events: none
 }
 .icon-styles:active {
     border: none;
@@ -16,4 +15,9 @@
 .icon-styles:hover {
     border: none;
     outline: none;
+}
+@media screen and (max-width: 700px) {
+    .icon-styles img {
+        width: 35px;
+    }
 }
