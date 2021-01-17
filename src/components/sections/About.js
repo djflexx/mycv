@@ -25,7 +25,7 @@ export default function About(props) {
           Now , this hobby has become my biggest passion and my goal is<br /> to make it my way of living.
           </p>
          <div className="about-image">
-             <img src="https://previews.dropbox.com/p/thumb/ABCQuih4t3_YFZoDaxS2d-IQoF0RooMMal9bQAxsB3mOlDl9Hg7UgaB0SFr7UzkszKq4UZyQFt0sZQ4Hyg11wSvLXcJcslCha8WgTKLHJRQ3yXHJiyk2BMvQJWhuqAS8sYVwdrTjt_jlNj9Sr3qwmOh7iCDhr_b4c7AXrhTyH2-0xF3d98gwTki5Q8TIZWrVLBJfxH2JC7BJjVmWsAErJChnBck2qlXeCyCwDlwJMSrvMhoLMtHDkLdCKzVI7syNTlda_F-cMVklam5vRWkXsOGZxaZ6XSJBd5uiDPD8YUTRjGQrV4CZlFfvxS5pAshlou-0_0tdgfALA8wlByl612QnJDzeHvkqrDnVLc0u4XuHNQ/p.jpeg?fv_content=true&size_mode=5" alt="me"></img>
+             <img src="https://www.dropbox.com/s/30g5jaqkgjrjxwe/IMG-0170%20%282%29.JPG?raw=1" alt="me"></img>
          </div> 
         </div>
         </div>
