@@ -81,7 +81,7 @@ export default function Section() {
                     </div>
                     }
                     <div ref={myRef}>   
-                    <Collapse in={isOpen} timeout={1000}>
+                    <Collapse in={isOpen && sectionName === section.name} timeout={900}>
                        {(sectionName === "about" && sectionName === section.name && <About title={section.content} open={isOpen} setIsOpen={setIsOpen}/> )}
                        {(sectionName === "resume" && sectionName === section.name &&  <Resume title={section.content} open={isOpen} setIsOpen={setIsOpen}/>)}
                        {(sectionName === "skillset" && sectionName === section.name && <Skillset title={section.content} open={isOpen} setIsOpen={setIsOpen}/>)}
