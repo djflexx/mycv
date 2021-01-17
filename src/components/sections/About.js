@@ -5,7 +5,7 @@ import SectionTitle from '../../components/SectionTitle'
 export default function About(props) {
     useEffect(() => {
         props.setIsOpen(true)       
-    }, [])
+    }, [props])
     const handleClick = () => {
         props.setIsOpen(false)
     }

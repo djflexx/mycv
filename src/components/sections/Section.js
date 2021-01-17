@@ -1,4 +1,4 @@
-import React, {useState, useReducer, useRef} from 'react'
+import React, {useState, useReducer} from 'react'
 
 
 
@@ -56,15 +56,11 @@ export default function Section() {
     name: "contact"
     },
     ]
-    const myRef = useRef(null)
-    const  executeScroll = () => myRef.current.scrollIntoView()
-    const handleClick = (event) => {
-    executeScroll()    
+    const handleClick = (event) => {   
     const currentItem = event.target.id;
     dispatch(currentItem);
     setIsClicked(currentItem)
     setIsOpen(prevstate => !prevstate)
-    console.log(isOpen)
     }
 
     return (
@@ -80,7 +76,7 @@ export default function Section() {
                       </>                     
                     </div>
                     }
-                    <div ref={myRef}>   
+                    <div>   
                     <Collapse in={isOpen && sectionName === section.name} timeout={900}>
                        {(sectionName === "about" && sectionName === section.name && <About title={section.content} open={isOpen} setIsOpen={setIsOpen}/> )}
                        {(sectionName === "resume" && sectionName === section.name &&  <Resume title={section.content} open={isOpen} setIsOpen={setIsOpen}/>)}

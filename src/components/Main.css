@@ -1,9 +1,11 @@
 .page-cont {
     width: 90%;
     margin: 0 auto;
+    padding-top: 150px;
 }
-@media screen and (max-width: 375px){
+@media screen and (max-width: 700px){
     .page-cont{
     width: 100%;
+    padding-top: 115px;
     }
 }
