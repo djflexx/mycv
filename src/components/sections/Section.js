@@ -11,6 +11,7 @@ import Skillset from './Skillset';
 import Projects from './Projects';
 import Contact from './Contact';
 import ClosingSection from './ClosingSection'
+import Collapse from '@material-ui/core/Collapse';
 
 
 const initialState = '';
@@ -80,11 +81,13 @@ export default function Section() {
                     </div>
                     }
                     <div ref={myRef}>   
+                    <Collapse in={isOpen} timeout={1000}>
                        {(sectionName === "about" && sectionName === section.name && <About title={section.content} open={isOpen} setIsOpen={setIsOpen}/> )}
                        {(sectionName === "resume" && sectionName === section.name &&  <Resume title={section.content} open={isOpen} setIsOpen={setIsOpen}/>)}
                        {(sectionName === "skillset" && sectionName === section.name && <Skillset title={section.content} open={isOpen} setIsOpen={setIsOpen}/>)}
                        {(sectionName === "projects" && sectionName === section.name &&  <Projects title={section.content} open={isOpen} setIsOpen={setIsOpen}/>)}
                        {(sectionName === "contact" && sectionName === section.name && <Contact title={section.content} open={isOpen} setIsOpen={setIsOpen} />)}
+                    </Collapse>
                     </div>                    
                     </div>
                 )
