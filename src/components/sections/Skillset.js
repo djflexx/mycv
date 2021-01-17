@@ -8,7 +8,7 @@ export default function Skillset(props) {
     props.setIsOpen(true)       
 }, [props])
 const handleClick = () => {
-    props.setIsOpen(false)
+    props.setIsOpen(prevState => !prevState)
 }
 
     return (
