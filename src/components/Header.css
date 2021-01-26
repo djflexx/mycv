@@ -6,16 +6,16 @@
    top:0;
    position: fixed;
 }
-.github-icon {
+.icons {
     position: absolute;
     right: 0;
     top: 0;
     margin: 15px 40px 0 0;
 }
-.github-icon:hover {
+.icons:hover {
     cursor: pointer;
 }
-.github-icon img {
+.icons img {
     width: 50px;
 }
 .header-title {
@@ -38,10 +38,10 @@
     margin-top: 5px;
 }
 @media screen and (max-width: 700px) {
-    .github-icon {
+    .icons {
         margin: 10px 10px 0 0; 
     }
-    .github-icon img {
+    .icons img {
         width: 35px;
     }
     .header {
