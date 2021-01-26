@@ -9,7 +9,7 @@ export default function Contact(props) {
     props.setIsOpen(true)       
 }, [props])
 const handleClick = () => {
-    props.setIsOpen(false)
+    props.setIsOpen(prevState => !prevState)
 }
     return (
       <div className="big-container" onClick={handleClick}>

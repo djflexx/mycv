@@ -14,15 +14,19 @@ export default function About(props) {
         {props.open && <SectionTitle content={props.title}/>}
         <div className="section-content">
           <p>
-          My name is Idan Atias, I am 29 years old,<br />
-          Born and raised in Israel.<br /> 
-          I enjoy developing websites,<br />
-          I have always been passionate about technology and innovations.<br /> 
-          I became interested in code 4 years ago. <br /> 
-          I have good interpersonal skills,<br />
-          I enjoy working with people around me and always look forward to learn.<br /> 
-          I feel satisfied solving difficult and complicated problems.<br /> 
-          Now , this hobby has become my biggest passion and my goal is<br /> to make it my way of living.
+          My name is Idan and I am 29 years old.
+          <br />
+          For as long as I can remember, I have always been drawn to technology. 
+          <br />
+          I taught myself Adobe suite when I was 15 and dabbled with HTML and CSS in high school.
+          <br />
+          My passion for technology and music led me to music production studies at BPM Collage, Tel-aviv.  
+          <br />
+          I have worked as a professional DJ and Music Producer for the last decade, while programming as a side hobby.  
+          <br />
+          This passion for coding evolved and grew in the past year. I have taught myself all the popular languages. 
+          <br />
+          I feel I am now ready to join a company as a junior full-stack developer. I enjoy working with people and solving challenging, complex, problems.
           </p>
          <div className="about-image">
              <img src="https://www.dropbox.com/s/30g5jaqkgjrjxwe/IMG-0170%20%282%29.JPG?raw=1" alt="me"></img>

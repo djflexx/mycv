@@ -6,9 +6,9 @@ export default function Projects(props) {
 
   useEffect(() => {
     props.setIsOpen(true)       
-}, [])
+}, [props])
 const handleClick = () => {
-    props.setIsOpen(false)
+    props.setIsOpen(prevState => !prevState)
 }
 
     return (
