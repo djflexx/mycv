@@ -14,7 +14,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
     min-height: 400px;
     border-top: 5px dashed rgba(139, 139, 139, 0.199);
 }
@@ -51,7 +51,6 @@
     padding: 6px;
     width: fit-content;
     border: 1px solid rgba(255, 255, 255, 0.596);
-    margin-left: 20px;
 }
 @media screen and (max-width: 700px) {
 .project-image {
