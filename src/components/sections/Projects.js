@@ -1,6 +1,7 @@
 import React,{useEffect} from 'react'
 import './Projects.css'
 import SectionTitle from '../../components/SectionTitle'
+import {projects} from '../.././ProjectsData'
 
 export default function Projects(props) {
 
@@ -15,16 +16,18 @@ const handleClick = () => {
       <div className="big-container" onClick={handleClick}>
       {props.open && <SectionTitle content={props.title}/>}
         <div className="section-content">
-          <div className="project-header-description">
-            <h1>Ecoswap</h1>
-            <p>The hub for eco-conscious consumers,<br /> 
-            Where they can find eco friendly<br/>
-            alternatives for every-day items</p>
-           <a href="https://ecoswap.me" target="_blank" >View Project</a>
-          </div>
-          <div className="project-image">
-             <img src="https://ecoswap.me/wp-content/uploads/2020/09/Untitled-3-05.png" alt="ecoswap"/>
-          </div>
+          {projects.map((i, index) => {
+            return (
+              <div className="project-header-description" key={index}>
+              <h1>{i.title}</h1>
+              <p>{i.description}</p>
+              <a href={i.link} target="_blank" >View Project</a>
+              <div className="project-image">
+                 <img src={i.img} alt={i.alt}/>
+              </div>
+              </div>
+            )
+          })}
         </div>
         </div>
     )
